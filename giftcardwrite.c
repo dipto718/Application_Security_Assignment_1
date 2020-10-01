@@ -24,9 +24,9 @@ struct gift_card_amount_change examplegcac;
 void setupgc() {
 	examplegc.num_bytes = 116;
 	examplegc.gift_card_data = (void *) &examplegcd;
-	examplegcd.merchant_id = "GiftCardz.com                   ";
-	examplegcd.customer_id = "DuaneGreenes Store 1451         ";
-	examplegcd.number_of_gift_card_records = -1;
+	examplegcd.merchant_id = "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+	examplegcd.customer_id = "/0";
+	examplegcd.number_of_gift_card_records = 1;
 
 	/* JAC: Something seems fishy... */
 	examplegcd.gift_card_record_data = malloc(examplegcd.number_of_gift_card_records);
