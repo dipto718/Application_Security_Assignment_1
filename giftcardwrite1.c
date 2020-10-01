@@ -47,9 +47,9 @@ void setupgc() {
 void writegc() {
 	FILE *fd1;
 	// JAC: Why don't any of these check for error return codes?!?
-	fd1 = fopen("crash2.gft","w");
+	fd1 = fopen("crash1.gft","w");
 	fwrite(&examplegc.num_bytes,4,1,fd1);
-	fwrite(examplegcd.merchant_id,32,1,fd1);
+	fwrite(examplegcd.merchant_id,64,1,fd1);
 	fwrite(examplegcd.customer_id,32,1,fd1);
 	fwrite(&examplegcd.number_of_gift_card_records,4,1,fd1);
 	fwrite(&examplegcrd.record_size_in_bytes,4,1,fd1);
