@@ -6,3 +6,10 @@ fuzzer2:
 The bug that causes the fuzzer2 test case to crash seems to have some connection to what causes fuzzer1 to crash since when testing my code I saw that the resolution to
 fuzzer1 also seemed to resolve the segmentation fault that was occuring here. Therefore, it is very likley that the bug here originated from the num_bytes being set
 to some negative number and therefore being invalid for the format of the file.
+
+cov1:
+This first coverage test covered the lines responsible for displaying a regular giftcard as that code did not run in the coverage with crash1 and crash2 as both of those were not properly formatted giftcards and hang was an animated messages and not a regular giftcard.
+
+cov2:
+This coverage test covered the lines responsible for displaying a messsage since the previous two crashes did not deal with any message attached to the gift card since, as mentioned before,
+the test cases for those two crashes were not properly formatted giftcards which is why the user had to be informed of their wrong format.
