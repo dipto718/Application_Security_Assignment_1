@@ -1,0 +1,2 @@
+language: c
+script: gcc -o giftcardreader giftcardreader.c && ./giftcardreader 1 cov1.gft && ./giftcardreader 1 cov2.gft && ./giftcardreader fuzzer1.gft && ./giftcardreader fuzzer2.gft
