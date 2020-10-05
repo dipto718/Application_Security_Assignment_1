@@ -1,1 +1,12 @@
+crash1:
+The bug in crash1 is triggered by the merchant id being written as 64 bits rather that 32. This causes it to overwrite things following it on the
+file and as a result causes a segmentation fault when the reader eventually reads that data. The solution that I found for this test case's bug
+relied on identifying when a value is abnormally large and then informing the user of the fact that the file has not been properly structured.
 
+crash2:
+The bug in crash 2 is triggered by specifically by the num_bytes being set to a string. Whatever conversion goes on from that results in the num_bytes being some abnormally large number and therefore eventually leads to a segmentation fault. The solution for this test cased relied on just identifying when num_bytes is abnormally large and
+informing the user that the file likely wasn't propery structured when created.
+
+hang:
+The bug in hang is caused by the animated message's interpreator keep on reading to jump back the pc by 3 and since the pc increments by 3 as well this causes the interpretor to keep on jumping to the current instruction and loop forever. The solution for this test case relied on putting a limit to how much the interpretor can loop before the
+program concludes it to have looped enough to potentially have been an infinite loop.
