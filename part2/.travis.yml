@@ -1,0 +1,2 @@
+language: c
+script: gcc -o giftcardreader giftcardreader.c && ./giftcardreader 1 crash1.gft && ./giftcardreader 1 crash2.gft && ./giftcardreader hang.gft
