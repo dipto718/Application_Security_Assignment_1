@@ -1,2 +1,2 @@
 language: c
-script: make testcrash1
+script: gcc -o giftcardreader giftcardreader.c && ./giftcardreader 1 examplefile.gft
