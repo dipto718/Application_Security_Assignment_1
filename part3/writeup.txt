@@ -1,1 +1,8 @@
+fuzzer1:
+The bug that causes the fuzzer1 test case to crash, based upon exploration of the code and the insertion of various print statements, seems to be that num_bytes is set to a negative and a file can't have a negative size. This issue was resolved by adding a test to see if the num_bytes is negative and informing user if this is
+the case so that they know that the gift card wasn't properly formatted.
 
+fuzzer2:
+The bug that causes the fuzzer2 test case to crash seems to have some connection to what causes fuzzer1 to crash since when testing my code I saw that the resolution to
+fuzzer1 also seemed to resolve the segmentation fault that was occuring here. Therefore, it is very likley that the bug here originated from the num_bytes being set
+to some negative number and therefore being invalid for the format of the file.
